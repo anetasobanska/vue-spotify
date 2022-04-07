@@ -15,8 +15,12 @@ export default {
   components: {
     HelloWorld,
   },
-  data: () => ({
-    name: process.env.VUE_APP_NAME,
-  }),
+  data() {
+    return {
+      name: process.env.VUE_APP_NAME,
+      clientId: process.env.VUE_APP_Client_ID,
+      clientSecret: process.env.VUE_APP_Client_Secret,
+    };
+  },
 };
 </script>
